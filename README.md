@@ -67,6 +67,7 @@ How to Run
 
 1. Clone the repository
 git clone https://github.com/MaryamMazareii/Sentiment-analysis-on-reviews.git
+
 cd Sentiment-analysis-on-reviews
 
 2. Install dependencies:
