@@ -63,6 +63,10 @@ Metrics were visualized with bar plots (precision, recall, F1).
 | RoBERTa | *98.7%*      | *99%*     | *99%*  | *99%*          |
 
 
+Winner: RoBERTa
+RoBERTa outperformed both LSTM and BERT, achieving the highest accuracy (98.7%) and macro F1-score (99%). Its superior contextual understanding and training on a larger corpus made it the most effective model for sentiment classification in this project
+
+
 How to Run
 
 1. Clone the repository
