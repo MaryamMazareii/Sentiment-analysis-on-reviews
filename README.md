@@ -1,33 +1,94 @@
-Sentiment Analysis with BERT
+This project focuses on comparing the performance of three deep learning models — LSTM, BERT, and RoBERTa — for sentiment analysis on textual reviews.
+The goal is to determine which model achieves the best performance in predicting positive, neutral, and negative sentiments.
+Objectives
 
-This repository contains a sentiment analysis project using BERT (Bidirectional Encoder Representations from Transformers) implemented in TensorFlow. The model classifies text reviews into three categories: positive, neutral, and negative.
+Build and train three different models for sentiment classification:
 
-Features:
+* LSTM – A sequential deep learning baseline.
 
-Preprocessing of text reviews (tokenization, padding, attention masks)
+* BERT – A transformer-based model with contextual embeddings.
 
-Label encoding for classification
+* RoBERTa – An optimized version of BERT trained on a larger corpus.
 
-BERT-based model fine-tuned for sentiment analysis
+Evaluate and compare their accuracy, precision, recall, and F1-score.
 
-Train/test split with evaluation metrics including:
+Visualize model performance metrics for clearer comparison.
 
-Accuracy
+The dataset consists of text reviews labeled with sentiment categories.
+Each entry contains:
 
-Confusion Matrix (with heatmap visualization)
+review: textual content
 
-Precision, Recall, F1-score using classification_report
+sentiment: sentiment label (negative, neutral, or positive)
 
-Inference on new examples
+LSTM
 
-Optionally includes early stopping to prevent overfitting
+Tokenized text data and padded sequences.
 
-Libraries Used:
+Embedding + LSTM + Dense layers.
 
-TensorFlow
+Loss: Categorical Crossentropy, Optimizer: Adam.
 
-Transformers (Hugging Face)
+BERT
 
-scikit-learn
+Tokenized using BertTokenizer (bert-base-uncased).
 
-pandas, numpy, seaborn, matplotlib
+Fine-tuned TFBertForSequenceClassification model.
+
+Optimized with learning rate 3e-5 and early stopping.
+
+RoBERTa
+
+Tokenized using RobertaTokenizer (roberta-base).
+
+Fine-tuned TFRobertaForSequenceClassification.
+
+Same setup as BERT for fair comparison.
+
+Training & Evaluation
+
+Each model was trained on the same training/validation split.
+After training:
+
+Predictions were generated on the validation set.
+
+classification_report and confusion matrices were used for evaluation.
+
+Metrics were visualized with bar plots (precision, recall, F1).
+
+| Model   | Accuracy | Precision | Recall | F1-Score |
+| ------- | -------- | --------- | ------ | -------- |
+| LSTM    | *xx%*    | *xx%*     | *xx%*  | *xx%*    |
+| BERT    | *xx%*    | *xx%*     | *xx%*  | *xx%*    |
+| RoBERTa | *xx%*    | *xx%*     | *xx%*  | *xx%*    |
+
+
+How to Run
+
+1. Clone the repository
+git clone https://github.com/MaryamMazareii/Sentiment-analysis-on-reviews.git
+cd Sentiment-analysis-on-reviews
+
+2. Install dependencies:
+pip install -r requirements.txt
+
+3. Run each notebook or script:
+* LSTM_Model.ipynb
+* BERT_Model.ipynb
+* RoBERTa_Model.ipynb
+
+4. View and compare metrics in the generated output cells or plots.
+
+Visualizations
+
+Example performance plot showing precision, recall, and F1-score for each sentiment class.
+
+Future Work
+
+* Expand dataset with more diverse reviews.
+* Experiment with hyperparameter tuning and dropout.
+* Test additional transformer models (DistilBERT, ALBERT, etc.).
+
+Author:
+Maryam Mazarei
+Computer Engineering Student | Deep Learning Enthusiast
