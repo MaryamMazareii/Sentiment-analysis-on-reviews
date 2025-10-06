@@ -56,11 +56,11 @@ classification_report and confusion matrices were used for evaluation.
 
 Metrics were visualized with bar plots (precision, recall, F1).
 
-| Model   | Accuracy | Precision | Recall | F1-Score |
-| ------- | -------- | --------- | ------ | -------- |
-| LSTM    | *xx%*    | *xx%*     | *xx%*  | *xx%*    |
-| BERT    | *xx%*    | *xx%*     | *xx%*  | *xx%*    |
-| RoBERTa | *xx%*    | *xx%*     | *xx%*  | *xx%*    |
+| Model   | Accuracy     | Precision | Recall | macro F1-Score |
+| ------- | ------------ | --------- | ------ | -------------- |
+| LSTM    | *42.3%*      | *13%*     | *33%*  | *19%*          |
+| BERT    | *98%*        | *98%*     | *98%*  | *98%*          |
+| RoBERTa | *98.7%*      | *99%*     | *99%*  | *99%*          |
 
 
 How to Run
